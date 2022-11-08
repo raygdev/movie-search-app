@@ -9,6 +9,25 @@ body{
     flex-direction: column;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+main > h1 {
+  padding: 1em;
+  margin: 0;
+  font-size: 2.7rem;
+}
+
+main > p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
 button {
     align-self: center;
     cursor: pointer;
