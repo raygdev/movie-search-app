@@ -1,7 +1,7 @@
 import { createRenderContent, el, handleNA, setButtonContent } from './utils.js'
 
 const key ="8351c96"
-const url =`http://www.omdbapi.com/?apikey=${key}&`
+const url =`https://www.omdbapi.com/?apikey=${key}&`
 
 const form = document.getElementById('form')
 const content = document.getElementById('content')
