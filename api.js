@@ -28,8 +28,7 @@ form.addEventListener('submit', (e)=>{
 
 
 async function getMovieTitles(searchValue){
-    content.innerHTML = `<div class="loader"></div>
-    <p>..loading</p>`
+    content.innerHTML = `<div class="loader"></div>`
     let res = await fetch(url+`s=${searchValue}`)
     let movies = await res.json()
     return movies
