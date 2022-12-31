@@ -35,7 +35,7 @@ export function setButtonContent(isDisable, text) {
 }
 
 export function createRenderContent(moviesArray, content) {
-    moviesArray.forEach( movie => {
+    const movies = moviesArray.map( movie => {
         let div = el('div')
         div.setAttribute('class','card')
         let figCap = el('figcaption')
@@ -49,13 +49,14 @@ export function createRenderContent(moviesArray, content) {
         let description = el('p')
         let image = el('img')
         description.textContent = movie.description
-        image.src = (movie.image === 'N/A') ? '': movie.image
+        image.src = (movie.image === 'N/A') ? 'https://www.shutterstock.com/image-vector/empty-placeholder-image-icon-design-260nw-1366372628.jpg': movie.image
         image.alt= movie.title
         figCap.appendChild(caption)
         figCap.appendChild(image)
         figCap.appendChild(dateCaption)
         div.appendChild(figCap)
         div.appendChild(description)
-        content.appendChild(div)
+        return div
     })
+    content.append(...movies)
 }
