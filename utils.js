@@ -49,7 +49,7 @@ export function createRenderContent(moviesArray, content) {
         let description = el('p')
         let image = el('img')
         description.textContent = movie.description
-        image.src = (movie.image === 'N/A') ? 'https://www.shutterstock.com/image-vector/empty-placeholder-image-icon-design-260nw-1366372628.jpg': movie.image
+        image.src = (movie.image === 'N/A') ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png': movie.image
         image.alt= movie.title
         figCap.appendChild(caption)
         figCap.appendChild(image)
